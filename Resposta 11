@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var input string
+
+	fmt.Print("Digite uma string: ")
+	fmt.Scan(&input)
+
+	withoutVowels := removeVowels(input)
+
+	fmt.Println("String sem vogais:", withoutVowels)
+}
+
+func removeVowels(str string) string {
+	vowels := "aeiouAEIOU"
+
+	withoutVowels := strings.Map(func(r rune) rune {
+		if strings.ContainsRune(vowels, r) {
+			return -1
+		}
+		return r
+	}, str)
+
+	return withoutVowels
+}
