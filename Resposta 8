@@ -1,0 +1,28 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var input string
+
+	fmt.Print("Digite uma string: ")
+	fmt.Scan(&input)
+
+	reversed := reverseString(input)
+
+	fmt.Println("String invertida:", reversed)
+}
+
+func reverseString(str string) string {
+	runes := []rune(str)
+	length := len(runes)
+
+	for i, j := 0, length-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+
+	return string(runes)
+}
