@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var input string
+
+	fmt.Print("Digite uma frase: ")
+	fmt.Scan(&input)
+
+	words := strings.Fields(input)
+	wordCount := len(words)
+
+	fmt.Println("A frase contém", wordCount, "palavra(s).")
+}
