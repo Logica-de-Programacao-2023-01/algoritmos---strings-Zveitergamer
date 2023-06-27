@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var input string
+	fmt.Print("Digite uma string: ")
+	fmt.Scan(&input)
+
+	// Removendo os espaços em branco da string
+	noSpacesString := strings.ReplaceAll(input, " ", "")
+
+	fmt.Println("String sem espaços em branco:", noSpacesString)
+}
